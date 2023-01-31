@@ -1,11 +1,11 @@
 # Hojas de cáculos Elinv
 
-## Table of Contents
+## Tabla de contenido
 
-- [Integramente en Javascript, Html y Css](#1)
+- [Solo en Javascript, Html y Css](#1)
 - [De Integración fácil en cualquier pagina web](#2)
 - [Permite parentesis y aplicación de símbolos matemáticos + - / * %](#3)
-- [Crear una planilla a medica para cada caso](#4)
+- [Crear una planilla a medida para cada caso](#4)
 
 ---
 
