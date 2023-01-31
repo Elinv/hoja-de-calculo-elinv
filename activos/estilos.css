@@ -1,3 +1,5 @@
+
+
 /* Formato de las celdas */
 input {
     text-align: center;
@@ -14,10 +16,10 @@ input {
     color: rgb(5, 3, 3);
     border: 1px solid #242527;
     text-align: center;
-    width: 100px;
+    width: 105px;
     height: 20px;
     float: left;
-    margin-left: 5px;
+    margin-left: 2px;
     -webkit-box-shadow: 1px 1px 15px 5px #4f4747;
     box-shadow: 1px 1px 15px 5px #6a5b5b;
 }
@@ -37,7 +39,7 @@ input {
     float: none;
     width: 25px;
     height: 20px;
-    margin: 1.1px 0 0 5px;
+    margin: 2.7px 0 0 5px; 
 }
 
 /* FIN Formato título columnas y filas */
@@ -56,14 +58,21 @@ y el cuerpo con las celdas. */
         "columnas columnas columnas"
         "filas cuerpo cuerpo"
         "filas cuerpo cuerpo";
+    overflow: auto;
 }
 
 .columnas {
     grid-area: columnas;
 }
 
+.columnas:first-child{
+    margin-left: 10px;
+}
+
 .filas {
     grid-area: filas;
+    margin-left: 10px;
+    margin-top: 1.6px;
 }
 
 .cuerpo {
@@ -76,8 +85,10 @@ y el cuerpo con las celdas. */
 html,
 body,
 .container {
-    height: 100%;
+    height:max-content;
+    width: max-content;
     margin: 0;
+    overflow: auto;
 }
 
 
@@ -92,10 +103,14 @@ y el cuerpo con las celdas. */
 
 /* Contenedor general de la planilla de calculos */
 #planillaCalculo {
+    padding: 2%;
     margin: 50px;
     /* border: 1px solid rgb(52, 51, 51); */
-    width: 1119px;
-    overflow-y: auto;
+    width: fit-content;
+    border: 2px solid #1C6EA4;
+    -webkit-box-shadow: 1px -1px 7px 1px rgba(0,0,0,0.85); 
+    box-shadow: 1px -1px 7px 1px rgba(0,0,0,0.85);
+    overflow: auto;
 }
 
 /* FIN Contenedor general de la planilla de calculos */
@@ -156,3 +171,19 @@ y el cuerpo con las celdas. */
     z-index: 101;
 }
 /* Menú contextual personalizado */
+
+* {
+box-sizing: border-box
+}
+
+/* tablet y telefono horizontal */
+@media screen and (max-width: 950px) {
+
+}
+
+/*teléfono vertical */
+@media screen and (max-width: 600px) {
+    #planillaCalculo {
+        margin: 5px;
+    }
+}

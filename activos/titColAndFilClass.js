@@ -68,7 +68,7 @@ class titColumFilas {
                 default:
                     break;
             }
-            this.planilla += `<div style="width:${this.sizeCelda}px;" class="col">${this.letraCol}</div>`;
+            this.planilla += `<div class="col">${this.letraCol}</div>`;
         }
 
         const col = this.toDOM(this.planilla);
