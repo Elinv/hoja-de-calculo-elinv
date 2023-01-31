@@ -177,27 +177,41 @@ y el cuerpo con las celdas. */
 }
 
 /* tablet y telefono horizontal */
-@media screen and (max-width: 950px) {}
+@media screen and (max-width: 950px) {
+    #planillaCalculo {
+        margin: 5px;
+    }
+
+    .col {
+        margin-top: 15px;
+        width: 150px;
+        height: 25px;
+    }
+
+    .primer {
+        height: 25px;
+    }
+
+    .fil {
+        float: none;
+        width: 25px;
+        height: 25px;
+        margin: 3px 0 0 5px;
+        margin-left: 1px;
+    }
+
+    .filas {
+        grid-area: filas;
+        margin-left: 10px;
+        margin-top: -4px;
+    }
+}
 
 /*teléfono vertical */
 @media screen and (max-width: 600px) {
     #planillaCalculo {
         margin: 5px;
     }
-
-    /* .col,
-    .fil {
-    background: rgb(200, 200, 200);
-    color: rgb(5, 3, 3);
-    border: 1px solid #242527;
-    text-align: center;
-    width: 150px;
-    height: 20px;
-    float: left;
-    margin-left: 2px;
-    -webkit-box-shadow: 1px 1px 15px 5px #4f4747;
-    box-shadow: 1px 1px 15px 5px #6a5b5b;
-    } */
 
     .col {
         margin-top: 15px;

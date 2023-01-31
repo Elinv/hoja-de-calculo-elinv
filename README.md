@@ -9,6 +9,16 @@
 
 ---
 
+Del tamaño que se quiera se puede realizar la hoja de cálculo:
+
+- Ejemplos en estos links de la pagina de Elinv:: <br>
+<a href="https://elinv.musica.ar/paciencia/hoja-de-calculo-elinv/">
+   Hoja de cálculo elinv ejemplo 1
+</a>
+- <a href="https://elinv.musica.ar/paciencia/hoja-de-calculo-elinv/hoja1.html">
+   Hoja de cálculo elinv ejemplo 2
+</a>
+
 ## Codigo explicado linea a linea 
 
 Se puede definir la cantidad de filas y columnas, como así el tamaño de las celdas.
