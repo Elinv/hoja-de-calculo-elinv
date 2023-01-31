@@ -1,5 +1,3 @@
-
-
 /* Formato de las celdas */
 input {
     text-align: center;
@@ -39,7 +37,7 @@ input {
     float: none;
     width: 25px;
     height: 20px;
-    margin: 2.7px 0 0 5px; 
+    margin: 2.7px 0 0 5px;
 }
 
 /* FIN Formato título columnas y filas */
@@ -65,7 +63,7 @@ y el cuerpo con las celdas. */
     grid-area: columnas;
 }
 
-.columnas:first-child{
+.columnas:first-child {
     margin-left: 10px;
 }
 
@@ -85,7 +83,7 @@ y el cuerpo con las celdas. */
 html,
 body,
 .container {
-    height:max-content;
+    height: max-content;
     width: max-content;
     margin: 0;
     overflow: auto;
@@ -108,8 +106,8 @@ y el cuerpo con las celdas. */
     /* border: 1px solid rgb(52, 51, 51); */
     width: fit-content;
     border: 2px solid #1C6EA4;
-    -webkit-box-shadow: 1px -1px 7px 1px rgba(0,0,0,0.85); 
-    box-shadow: 1px -1px 7px 1px rgba(0,0,0,0.85);
+    -webkit-box-shadow: 1px -1px 7px 1px rgba(0, 0, 0, 0.85);
+    box-shadow: 1px -1px 7px 1px rgba(0, 0, 0, 0.85);
     overflow: auto;
 }
 
@@ -153,6 +151,7 @@ y el cuerpo con las celdas. */
 .editCeldas {
     border: 1.5px solid #1C6EA4;
 }
+
 /* FIN Remarcado en las celdas editándose */
 
 /* Menú contextual personalizado */
@@ -170,20 +169,57 @@ y el cuerpo con las celdas. */
     opacity: 0.8;
     z-index: 101;
 }
+
 /* Menú contextual personalizado */
 
 * {
-box-sizing: border-box
+    box-sizing: border-box
 }
 
 /* tablet y telefono horizontal */
-@media screen and (max-width: 950px) {
-
-}
+@media screen and (max-width: 950px) {}
 
 /*teléfono vertical */
 @media screen and (max-width: 600px) {
     #planillaCalculo {
         margin: 5px;
+    }
+
+    /* .col,
+    .fil {
+    background: rgb(200, 200, 200);
+    color: rgb(5, 3, 3);
+    border: 1px solid #242527;
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    float: left;
+    margin-left: 2px;
+    -webkit-box-shadow: 1px 1px 15px 5px #4f4747;
+    box-shadow: 1px 1px 15px 5px #6a5b5b;
+    } */
+
+    .col {
+        margin-top: 15px;
+        width: 150px;
+        height: 25px;
+    }
+
+    .primer {
+        height: 25px;
+    }
+
+    .fil {
+        float: none;
+        width: 25px;
+        height: 25px;
+        margin: 3px 0 0 5px;
+        margin-left: 1px;
+    }
+
+    .filas {
+        grid-area: filas;
+        margin-left: 10px;
+        margin-top: -4px;
     }
 }
