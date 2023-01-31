@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla de calculo Elinv.</title>
+
+    <link rel="stylesheet" href="./activos/estilos.css">
+
+</head>
+
+<body>
+    <!-- Opciones varias -->
+    <!-- Menu contextual -->
+    <div id="menuCont" onclick="this.style.display='none'">
+        <p onclick='saveHC();'>Grabar Hoja</p>
+        <p onclick='loadHC()'>Leer Hora</p>
+        <p onclick='Claves()'>Refrescar hojas almacenadas</p>
+        <p onclick="localStorage.clear();Claves();">Eliminar hojas de cálculos almacenadas.</p>
+    </div>
+
+    <!-- Mensaje de alerta -->
+    <div class="alert" id="alerta">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong id="tit">Elinv alertas!</strong>
+        <span id="texto">La primer planilla de cálculos en Javascript es de Elinv.</span>
+    </div>
+    <!-- FIN Opciones varias -->
+
+    <!-- Planilla de Calculo -->
+    <div id="planillaCalculo">
+        <label for="calcElinv">Hojas de Cálculo creadas</label>
+        <select name="calcElinv" id="calcElinv" onchange="loadHC()";>
+        </select>
+        <hr>
+
+        <input type="text" size="60" formula="" class="celElv" name="formula" id="formula">
+        <div class="container">
+            <div class="columnas" id="col"></div>
+            <div class="filas" id="fil"></div>
+            <div class="cuerpo" id="cuerpo"></div>
+        </div>
+    </div>
+
+    <!-- Activos necesarios -->
+    <script src="./activos/storage.js"></script>
+    <script src="./activos/titColAndFilClass.js"></script>
+    <script src="./activos/fillCeldasClass.js"></script>
+    <script src="./activos/planilla_calculo_elinv.js"></script>
+
+    <script>
+
+        const titColFil = new titColumFilas(5, 3, 100);
+        titColFil.init();
+
+        const celdasFil = new fillCeldas(5, 4, 10);
+        celdasFil.init();
+
+    </script>
+
+</body>
+
+</html>

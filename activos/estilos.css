@@ -1,0 +1,158 @@
+/* Formato de las celdas */
+input {
+    text-align: center;
+    margin: 1px;
+}
+
+/* FIN Formato de las celdas */
+
+/* Formato título columnas y filas */
+.col,
+.primer,
+.fil {
+    background: rgb(200, 200, 200);
+    color: rgb(5, 3, 3);
+    border: 1px solid #242527;
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    float: left;
+    margin-left: 5px;
+    -webkit-box-shadow: 1px 1px 15px 5px #4f4747;
+    box-shadow: 1px 1px 15px 5px #6a5b5b;
+}
+
+.col {
+    margin-top: 15px;
+}
+
+.primer {
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.fil {
+    float: none;
+    width: 25px;
+    height: 20px;
+    margin: 1.1px 0 0 5px;
+}
+
+/* FIN Formato título columnas y filas */
+
+
+/* Contenedor grid de los titulos de las columnas, 
+de las filas, 
+y el cuerpo con las celdas. */
+.container {
+    display: grid;
+    grid-template-columns: 0.1fr 2.0fr 0.9fr;
+    grid-template-rows: 0fr 1.8fr 1fr;
+    gap: 1px 1px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "columnas columnas columnas"
+        "filas cuerpo cuerpo"
+        "filas cuerpo cuerpo";
+}
+
+.columnas {
+    grid-area: columnas;
+}
+
+.filas {
+    grid-area: filas;
+}
+
+.cuerpo {
+    grid-area: cuerpo;
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+
+html,
+body,
+.container {
+    height: 100%;
+    margin: 0;
+}
+
+
+.container * {
+    /* border: 1px solid rgb(52, 51, 51); */
+    position: relative;
+}
+
+/* FIN Contenedor grid de los titulos de las columnas, 
+de las filas, 
+y el cuerpo con las celdas. */
+
+/* Contenedor general de la planilla de calculos */
+#planillaCalculo {
+    margin: 50px;
+    /* border: 1px solid rgb(52, 51, 51); */
+    width: 1119px;
+    overflow-y: auto;
+}
+
+/* FIN Contenedor general de la planilla de calculos */
+
+/* Mensaje de alerta */
+
+.alert {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    z-index: 100;
+    display: none;
+    -webkit-box-shadow: 2px 2px 26px 7px rgba(0, 0, 0, 0.83);
+    box-shadow: 2px 2px 26px 7px rgba(0, 0, 0, 0.83);
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* FIN Mensaje de alerta */
+
+/* Remarcado en las celdas editándose */
+.editCeldas {
+    border: 1.5px solid #1C6EA4;
+}
+/* FIN Remarcado en las celdas editándose */
+
+/* Menú contextual personalizado */
+#menuCont {
+    position: absolute;
+    display: none;
+    padding: 24px;
+    color: 0F0F0F;
+    cursor: pointer;
+    background: #FFFFFF;
+    border: 2px solid #F0F0F0;
+    filter: alpha(Opacity=80);
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    z-index: 101;
+}
+/* Menú contextual personalizado */
